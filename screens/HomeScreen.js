@@ -3,6 +3,7 @@ import React from 'react'
 import tw from "twrnc";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { UserIcon, AdjustmentsVerticalIcon, ChevronDownIcon, MagnifyingGlassIcon } from "react-native-heroicons/outline";
+import Categories from '../components/Categories';
 
 const HomeScreen = () => {
 
@@ -45,8 +46,14 @@ const HomeScreen = () => {
 
       {/* Body */}
 
-      <ScrollView>
+      <ScrollView
+        style={tw`bg-gray-100`}
+        contentContainerStyle={{
+          paddingBottom: 100,
+        }}
+      >
         {/* Categories */}
+        <Categories />
 
         {/* Featured Rows */}
 
