@@ -70,7 +70,9 @@ const BasketScreen = () => {
           </TouchableOpacity>
         </View>
 
-        <ScrollView style={tw`divide-y divide-gray-200`}>
+        <ScrollView
+        // style={tw`divide-y divide-gray-200`}
+        >
           {Object.entries(groupedItemsInBasket).map(([key, items]) => (
             <View
               key={key}
@@ -114,7 +116,10 @@ const BasketScreen = () => {
             <Text style={tw`font-extrabold`}>AZN {basketTotal + 5.99}</Text>
           </View>
 
-          <TouchableOpacity style={tw`rounded-lg bg-[#00CCBB] p-4`}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("PreparingOrder")}
+            style={tw`rounded-lg bg-[#00CCBB] p-4`}
+          >
             <Text style={tw`text-center text-white text-lg font-bold`}>
               Place Order
             </Text>
